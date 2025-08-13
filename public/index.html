@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Film Planner</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Film Planner</h1>
+  </header>
+  <nav>
+    <button data-section="calendar">Kalendár</button>
+    <button data-section="projects">Projekty</button>
+    <button data-section="tasks">Úlohy</button>
+    <button data-section="shots">Shot list</button>
+    <button data-section="storyboard">Storyboard</button>
+  </nav>
+  <main>
+    <section id="calendar" class="active">
+      <h2>Kalendár udalostí</h2>
+      <form id="event-form">
+        <input type="text" id="event-title" placeholder="Názov udalosti" required />
+        <input type="date" id="event-date" required />
+        <button type="submit">Pridať udalosť</button>
+      </form>
+      <ul id="event-list"></ul>
+    </section>
+    <section id="projects">
+      <h2>Projekty</h2>
+      <form id="project-form">
+        <input type="text" id="project-name" placeholder="Názov projektu" required />
+        <input type="date" id="project-deadline" required />
+        <input type="text" id="project-client" placeholder="Klient" />
+        <textarea id="project-desc" placeholder="Popis"></textarea>
+        <button type="submit">Pridať projekt</button>
+      </form>
+      <ul id="project-list"></ul>
+    </section>
+    <section id="tasks">
+      <h2>Úlohy</h2>
+      <form id="task-form">
+        <input type="text" id="task-text" placeholder="Nová úloha" required />
+        <button type="submit">Pridať úlohu</button>
+      </form>
+      <ul id="task-list"></ul>
+    </section>
+    <section id="shots">
+      <h2>Shot list</h2>
+      <form id="shot-form">
+        <input type="text" id="shot-name" placeholder="Názov záberu" required />
+        <textarea id="shot-desc" placeholder="Popis"></textarea>
+        <button type="submit">Pridať záber</button>
+      </form>
+      <ul id="shot-list"></ul>
+    </section>
+    <section id="storyboard">
+      <h2>Storyboard</h2>
+      <form id="story-form">
+        <input type="file" id="story-image" accept="image/*" required />
+        <input type="text" id="story-desc" placeholder="Popis" />
+        <input type="text" id="story-camera" placeholder="Info o kamere" />
+        <button type="submit">Pridať panel</button>
+      </form>
+      <div id="story-list"></div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

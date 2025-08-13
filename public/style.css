@@ -1,0 +1,53 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+header, nav {
+  background: #222;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+nav button {
+  flex: 1;
+  padding: 10px;
+  background: #444;
+  color: #fff;
+  border: none;
+}
+
+main {
+  padding: 10px;
+}
+
+section {
+  display: none;
+}
+
+section.active {
+  display: block;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+#story-list img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 5px;
+}
